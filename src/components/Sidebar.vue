@@ -4,31 +4,31 @@
     <div class="company-name">POS HUB</div>
 
     <el-scrollbar>
-      <el-menu>
-        <el-menu-item index="dashboard">
+      <el-menu router>
+        <el-menu-item :index="'/'">
           <el-icon><HomeFilled /></el-icon>
           <span>Dashboard</span>
         </el-menu-item>
 
-        <el-sub-menu index="1">
+        <el-sub-menu index="products">
           <template #title>
             <el-icon><Notebook /></el-icon>Products
           </template>
-            <el-menu-item index="1-1">List Products</el-menu-item>
-            <el-menu-item index="1-2">Deals of the Week</el-menu-item>
-            <el-menu-item index="1-3">Quantity Adjustments</el-menu-item>
-            <el-menu-item index="1-4">Archived Products</el-menu-item>
+            <el-menu-item :index="'/products/list'">List Products</el-menu-item>
+            <el-menu-item :index="'/products/deals'">Deals of the Week</el-menu-item>
+            <el-menu-item :index="'/products/quantity'">Quantity Adjustments</el-menu-item>
+            <el-menu-item :index="'/products/archived'">Archived Products</el-menu-item>
         </el-sub-menu>
 
-        <el-sub-menu index="2">
+        <el-sub-menu index="sales">
           <template #title>
             <el-icon><Sell /></el-icon>Sales
           </template>
-            <el-menu-item index="2-1">List Sales</el-menu-item>
-            <el-menu-item index="2-2">Gift Cards</el-menu-item>
+            <el-menu-item :index="'/sales/list'">List Sales</el-menu-item>
+            <el-menu-item :index="'/sales/gifts'">Gift Cards</el-menu-item>
         </el-sub-menu>
 
-        <el-menu-item index="quotation">
+        <el-menu-item :index="'quotation'">
           <el-icon><Goods /></el-icon>
           <span>Quotation</span>
         </el-menu-item>
@@ -37,24 +37,24 @@
           <template #title>
             <el-icon><SoldOut /></el-icon>Purchases
           </template>
-            <el-menu-item index="3-1">List Purchases</el-menu-item>
-            <el-menu-item index="3-2">Returns</el-menu-item>
-            <el-menu-item index="3-3">Expenses</el-menu-item>
+            <el-menu-item :index="'/purchases/list'">List Purchases</el-menu-item>
+            <el-menu-item :index="'/purchases/returns'">Returns</el-menu-item>
+            <el-menu-item :index="'/purchases/expenses'">Expenses</el-menu-item>
         </el-sub-menu>
 
         <el-sub-menu index="4">
           <template #title>
             <el-icon><TopRight /></el-icon>Transfers
           </template>
-            <el-menu-item index="4-1">List Transfers</el-menu-item>
+            <el-menu-item :index="'/transfers/list'">List Transfers</el-menu-item>
         </el-sub-menu>
 
-        <el-menu-item index="people">
+        <el-menu-item :index="'/people'">
           <el-icon><User /></el-icon>
           <span>People</span>
         </el-menu-item>
 
-        <el-menu-item index="notification">
+        <el-menu-item :index="'/notification'">
           <el-icon><Bell /></el-icon>
           <span>Notifications</span>
         </el-menu-item>
@@ -63,19 +63,19 @@
           <template #title>
             <el-icon><Setting /></el-icon>Settings
           </template>
-            <el-menu-item index="5-1">System Settings</el-menu-item>
-            <el-menu-item index="5-2">ISBN Checker</el-menu-item>
-            <el-menu-item index="5-3">POS Settings</el-menu-item>
-            <el-menu-item index="5-4">Discount Groups</el-menu-item>
-            <el-menu-item index="5-5">Customer Groups</el-menu-item>
-            <el-menu-item index="5-6">Categories</el-menu-item>
-            <el-menu-item index="5-7">Book Status</el-menu-item>
-            <el-menu-item index="5-8">Variations</el-menu-item>
-            <el-menu-item index="5-9">Warehouses</el-menu-item>
-            <el-menu-item index="5-0">Group Permissions</el-menu-item>
+            <el-menu-item :index="'/settings/system'">System Settings</el-menu-item>
+            <el-menu-item :index="'/settings/isbn'">ISBN Checker</el-menu-item>
+            <el-menu-item :index="'/settings/pos'">POS Settings</el-menu-item>
+            <el-menu-item :index="'/settings/discount-groups'">Discount Groups</el-menu-item>
+            <el-menu-item :index="'/settings/customer-groups'">Customer Groups</el-menu-item>
+            <el-menu-item :index="'/settings/categories'">Categories</el-menu-item>
+            <el-menu-item :index="'/settings/book-status'">Book Status</el-menu-item>
+            <el-menu-item :index="'/settings/variations'">Variations</el-menu-item>
+            <el-menu-item :index="'/settings/warehouses'">Warehouses</el-menu-item>
+            <el-menu-item :index="'/settings/group-permissions'">Group Permissions</el-menu-item>
         </el-sub-menu>
         
-        <el-menu-item index="reports">
+        <el-menu-item :index="'/reports'">
           <el-icon><Goods /></el-icon>
           <span>Reports</span>
         </el-menu-item>
